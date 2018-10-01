@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bvh-hR-RmH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hacker News-->
+        <scene sceneID="5UO-AG-lVR">
+            <objects>
+                <tableViewController id="rvB-at-ite" customClass="HackerNewsTableViewController" customModule="HackerNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="76C-Tb-3XS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HackerNewsTableViewCell" rowHeight="108" id="gvW-U6-OGl" customClass="HackerNewsTableViewCell" customModule="HackerNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gvW-U6-OGl" id="cwM-Dp-drY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😛 27" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh8-EM-mki">
+                                            <rect key="frame" x="26" y="5" width="41" height="52"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="52" id="BNY-g6-8pp"/>
+                                                <constraint firstAttribute="width" constant="41" id="kOq-J0-6NG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking News: Swiping" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljD-Xj-DWK">
+                                            <rect key="frame" x="92" y="7" width="184" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="vPa-SY-OAN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byy-vy-kT2">
+                                            <rect key="frame" x="253" y="67" width="97" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="zuZ-64-TPa"/>
+                                            </constraints>
+                                            <state key="normal" title="23 Comments"/>
+                                            <connections>
+                                                <action selector="showCommentsTapped:" destination="rvB-at-ite" eventType="touchUpInside" id="65N-zi-FB6"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="April 1, 2018" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqz-CG-Ifu">
+                                            <rect key="frame" x="16" y="65" width="94" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="ulf-4B-lX0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ljD-Xj-DWK" secondAttribute="trailing" constant="99" id="1vd-9X-gGR"/>
+                                        <constraint firstItem="ljD-Xj-DWK" firstAttribute="top" secondItem="cwM-Dp-drY" secondAttribute="top" constant="7" id="2cl-DR-ej6"/>
+                                        <constraint firstItem="byy-vy-kT2" firstAttribute="bottom" secondItem="cwM-Dp-drY" secondAttribute="bottomMargin" id="2mC-mM-XzC"/>
+                                        <constraint firstItem="ljD-Xj-DWK" firstAttribute="leading" secondItem="uh8-EM-mki" secondAttribute="trailing" constant="25" id="MJ1-ZF-pAA"/>
+                                        <constraint firstItem="uh8-EM-mki" firstAttribute="top" secondItem="cwM-Dp-drY" secondAttribute="top" constant="5" id="coD-UG-4lO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="byy-vy-kT2" secondAttribute="trailing" constant="9" id="iAm-Cs-UIx"/>
+                                        <constraint firstItem="uh8-EM-mki" firstAttribute="leading" secondItem="cwM-Dp-drY" secondAttribute="leading" constant="26" id="sKE-XY-Rvo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Gqz-CG-Ifu" secondAttribute="bottom" constant="11" id="tdl-5o-wsV"/>
+                                        <constraint firstItem="Gqz-CG-Ifu" firstAttribute="leading" secondItem="cwM-Dp-drY" secondAttribute="leadingMargin" id="ybt-50-VYZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="articleCommentButton" destination="byy-vy-kT2" id="FNP-cY-wDk"/>
+                                    <outlet property="articleLabel" destination="ljD-Xj-DWK" id="IA9-ym-pYa"/>
+                                    <outlet property="articleTime" destination="Gqz-CG-Ifu" id="g1N-6t-EUz"/>
+                                    <outlet property="articleVote" destination="uh8-EM-mki" id="cCX-re-gUe"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rvB-at-ite" id="XHn-ic-shP"/>
+                            <outlet property="delegate" destination="rvB-at-ite" id="lYd-bf-tYS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Hacker News" id="2nN-v8-xHW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSk-Vr-J6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141.5999999999999" y="238.83058470764618"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1aN-Xm-dGh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bvh-hR-RmH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="a2b-Jb-7kb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rvB-at-ite" kind="relationship" relationship="rootViewController" id="nG6-GX-F2u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6I-61-dzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="239"/>
+        </scene>
+    </scenes>
+</document>
